@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boss直聘职位沟通管理 - Chrome 插件</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #667eea;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #667eea;
+    }
+
+    .install-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .install-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .hero {
+      padding: 180px 0 120px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      opacity: 0.95;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .hero-btn {
+      padding: 16px 40px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .hero-btn.primary {
+      background: white;
+      color: #667eea;
+    }
+
+    .hero-btn.primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-btn.secondary {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-btn.secondary:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: white;
+    }
+
+    .features {
+      background: white;
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #666;
+      font-size: 18px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .feature-card {
+      padding: 40px;
+      background: #f8f9fa;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+
+    .feature-icon svg {
+      width: 30px;
+      height: 30px;
+      color: white;
+    }
+
+    .feature-card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .feature-card p {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .how-it-works {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .how-it-works .section-title h2 {
+      color: white;
+    }
+
+    .how-it-works .section-title p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .steps {
+      display: flex;
+      justify-content: space-around;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .step {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 3px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0 auto 30px;
+    }
+
+    .step h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .step p {
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+
+    .screenshot {
+      padding: 100px 0;
+      background: white;
+    }
+
+    .screenshot-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 60px;
+      border-radius: 30px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .screenshot img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .screenshot-caption {
+      text-align: center;
+      margin-top: 30px;
+      color: white;
+      font-size: 18px;
+    }
+
+    .testimonials {
+      padding: 100px 0;
+      background: #f8f9fa;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .testimonial-text {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 25px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .author-name {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .author-title {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .faq {
+      padding: 100px 0;
+      background: white;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e9ecef;
+      padding: 30px 0;
+    }
+
+    .faq-question {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .faq-answer {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .footer {
+      background: #1a1a2e;
+      color: white;
+      padding: 60px 0 30px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 50px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.8;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .steps {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">💼</div>
+          Boss直聘助手
+        </div>
+        <nav class="nav-links">
+          <a href="#features">功能特点</a>
+          <a href="#how-it-works">使用方法</a>
+          <a href="#faq">常见问题</a>
+        </nav>
+        <a href="https://chrome.google.com/webstore" class="install-btn">立即安装</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>拒绝重复沟通<br>让求职更高效</h1>
+      <p>自动标记已沟通职位，智能管理求职进度，再也不用担心重复联系同一家公司</p>
+      <div class="hero-buttons">
+        <a href="https://chrome.google.com/webstore" class="hero-btn primary">免费安装插件</a>
+        <a href="#how-it-works" class="hero-btn secondary">了解更多</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>核心功能</h2>
+        <p>专为求职者打造的智能管理工具</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3>智能标记</h3>
+          <p>点击"立即沟通"后自动标记已沟通职位，再次浏览时清晰显示"已沟通"状态</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3>时间记录</h3>
+          <p>自动记录每次沟通的时间戳，方便追溯求职历程</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+            </svg>
+          </div>
+          <h3>职位管理</h3>
+          <p>集中管理所有已沟通职位，支持分页浏览和批量操作</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3>数据统计</h3>
+          <p>实时显示已沟通职位总数，掌握求职进度</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <h3>精准识别</h3>
+          <p>基于岗位名称和公司名称双重识别，确保标记准确无误</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+          </div>
+          <h3>实时同步</h3>
+          <p>数据自动同步，更换浏览器或设备也能正常使用</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-title">
+        <h2>使用方法</h2>
+        <p>三步搞定，简单易用</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>安装插件</h3>
+          <p>从 Chrome Web Store 一键安装，无需重启浏览器</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>浏览职位</h3>
+          <p>在 Boss 直聘浏览职位，点击"立即沟通"按钮</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>自动标记</h3>
+          <p>插件自动标记已沟通职位，下次浏览时会显示提醒</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>用户评价</h2>
+        <p>来自真实用户的使用反馈</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"终于不用每次都看半天职位详情才能确认有没有沟通过了！这个插件大大提高了我的求职效率。"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">李</div>
+            <div>
+              <div class="author-name">李明</div>
+              <div class="author-title">软件工程师</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"作为产品经理，每天要投几十个职位。这个插件帮我避免了多次联系同一家公司的尴尬，非常实用！"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">王</div>
+            <div>
+              <div class="author-name">王芳</div>
+              <div class="author-title">产品经理</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"界面简洁，操作方便，时间记录功能帮我更好地追踪求职进度。强烈推荐给所有求职者！"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">张</div>
+            <div>
+              <div class="author-name">张伟</div>
+              <div class="author-title">前端开发</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>常见问题</h2>
+        <p>解答您的疑问</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">这个插件安全吗？</div>
+          <div class="faq-answer">是的，插件仅使用必要的权限（storage）来保存数据，不会收集或上传任何个人信息。所有数据都存储在您的浏览器本地。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">支持哪些浏览器？</div>
+          <div class="faq-answer">支持所有基于 Chromium 的浏览器，包括 Google Chrome、Microsoft Edge、Brave、Opera 等。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">如何查看已沟通的职位列表？</div>
+          <div class="faq-answer">点击浏览器工具栏中的插件图标，即可查看所有已沟通职位的完整列表，支持分页浏览和删除操作。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">数据会同步到其他设备吗？</div>
+          <div class="faq-answer">目前数据存储在本地浏览器中。如果您需要在多个设备间同步，可以使用浏览器的同步功能或定期导出数据。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">插件是免费的吗？</div>
+          <div class="faq-answer">是的，插件完全免费使用，无任何隐藏费用或广告。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Boss直聘助手</h3>
+          <p>一款专为求职者设计的 Chrome 插件，帮助您更高效地管理 Boss 直聘平台的求职进度。</p>
+        </div>
+        <div class="footer-section">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="#features">功能特点</a></li>
+            <li><a href="#how-it-works">使用方法</a></li>
+            <li><a href="#faq">常见问题</a></li>
+            <li><a href="https://chrome.google.com/webstore">安装插件</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>联系我们</h3>
+          <ul>
+            <li><a href="mailto:support@example.com">support@example.com</a></li>
+            <li><a href="https://github.com">GitHub</a></li>
+            <li><a href="https://twitter.com">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Boss直聘助手. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
