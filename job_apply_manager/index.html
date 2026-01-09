@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boss直聘职位沟通管理 - Chrome 插件</title>
+  <title>Boss直聘职位发起管理 - Chrome 插件</title>
   <style>
     * {
       margin: 0;
@@ -44,7 +44,7 @@
     .logo {
       font-size: 24px;
       font-weight: 700;
-      color: #667eea;
+      color: white;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -53,7 +53,8 @@
     .logo-icon {
       width: 40px;
       height: 40px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.5);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -461,6 +462,9 @@
     <div class="container">
       <div class="header-content">
         <div class="logo">
+        <div class="logo-icon">💼</div>
+        Boss直聘助手
+      </div>
           <div class="logo-icon">💼</div>
           Boss直聘助手
         </div>
@@ -477,7 +481,7 @@
   <section class="hero">
     <div class="container">
       <h1>拒绝重复沟通<br>让求职更高效</h1>
-      <p>自动标记已沟通职位，智能管理求职进度，再也不用担心重复联系同一家公司</p>
+      <p>自动标记已发起职位，智能管理求职进度，再也不用担心重复联系同一家公司</p>
       <div class="hero-buttons">
         <a href="https://chrome.google.com/webstore" class="hero-btn primary">免费安装插件</a>
         <a href="#how-it-works" class="hero-btn secondary">了解更多</a>
@@ -499,7 +503,7 @@
             </svg>
           </div>
           <h3>智能标记</h3>
-          <p>点击"立即沟通"后自动标记已沟通职位，再次浏览时清晰显示"已沟通"状态</p>
+          <p>点击"立即沟通"后自动标记已发起职位，再次浏览时清晰显示"已发起"状态</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -517,7 +521,7 @@
             </svg>
           </div>
           <h3>职位管理</h3>
-          <p>集中管理所有已沟通职位，支持分页浏览和批量操作</p>
+          <p>集中管理所有已发起职位，支持分页浏览、删除和导出 CSV 备份</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -526,7 +530,7 @@
             </svg>
           </div>
           <h3>数据统计</h3>
-          <p>实时显示已沟通职位总数，掌握求职进度</p>
+          <p>实时显示已发起职位总数，掌握求职进度</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -569,8 +573,8 @@
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>自动标记</h3>
-          <p>插件自动标记已沟通职位，下次浏览时会显示提醒</p>
+          <h3>管理职位</h3>
+          <p>点击插件图标，查看所有已发起职位，支持删除和导出</p>
         </div>
       </div>
     </div>
@@ -633,8 +637,8 @@
           <div class="faq-answer">支持所有基于 Chromium 的浏览器，包括 Google Chrome、Microsoft Edge、Brave、Opera 等。</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">如何查看已沟通的职位列表？</div>
-          <div class="faq-answer">点击浏览器工具栏中的插件图标，即可查看所有已沟通职位的完整列表，支持分页浏览和删除操作。</div>
+          <div class="faq-question">如何查看已发起的职位列表？</div>
+          <div class="faq-answer">点击浏览器工具栏中的插件图标，即可查看所有已发起职位的完整列表，支持分页浏览、删除和导出 CSV 功能。</div>
         </div>
         <div class="faq-item">
           <div class="faq-question">数据会同步到其他设备吗？</div>
@@ -667,7 +671,7 @@
         <div class="footer-section">
           <h3>联系我们</h3>
           <ul>
-            <li><a href="mailto:support@example.com">support@example.com</a></li>
+            <li><a href="mailto:shidongwa@gmail.com">shidongwa@gmail.com</a></li>
             <li><a href="https://github.com">GitHub</a></li>
             <li><a href="https://twitter.com">Twitter</a></li>
           </ul>
