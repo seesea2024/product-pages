@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactManager - 技术支持</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #007AFF;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007AFF;
+            padding-bottom: 10px;
+        }
+        .section h3 {
+            color: #5856D6;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        .section p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .section ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        .section li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .feature-card {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #007AFF;
+        }
+        .feature-card strong {
+            color: #007AFF;
+        }
+        .contact-box {
+            background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .contact-box h3 {
+            color: #007AFF;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        .contact-box a {
+            display: inline-block;
+            background: #007AFF;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        .contact-box a:hover {
+            background: #5856D6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,122,255,0.3);
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+        .faq-item h4 {
+            color: #007AFF;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        .privacy-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .privacy-link a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ContactManager</h1>
+            <p>技术支持中心</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>应用功能</h2>
+                <p>ContactManager 是一款专业的通讯录管理工具，提供以下核心功能：</p>
+
+                <div class="feature-card">
+                    <strong>通讯录联系人去重</strong>
+                    <p>智能检测并合并重复的联系人，支持按电话号码和姓名两种方式检测。</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>联系人管理</strong>
+                    <p>轻松修改、删除、编辑联系人信息，支持批量操作。</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>联系人合并</strong>
+                    <p>智能合并重复联系人，自动保留最完整的信息，避免数据丢失。</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>导入导出</strong>
+                    <p>从系统通讯录导入联系人，以VCF格式导出联系人进行备份或分享。</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>同步系统通讯录</strong>
+                    <p>将应用内的联系人同步回系统通讯录，基于iCloud实现跨设备同步。</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>备份和恢复</strong>
+                    <p>创建本地备份文件，随时恢复通讯录数据，支持备份历史管理。</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>隐私与安全</h2>
+                <p><strong>数据安全是我们最重要的承诺：</strong></p>
+                <ul>
+                    <li><strong>完全本地操作：</strong>所有联系人数据的处理、修改、合并、删除都在您的设备本地完成</li>
+                    <li><strong>无云端上传：</strong>应用不会将您的通讯录数据上传到任何第三方服务器</li>
+                    <li><strong>系统同步：</strong>跨网络传输仅支持通过iOS系统框架调用iCloud服务进行系统通讯录同步</li>
+                    <li><strong>数据控制：</strong>您完全掌控自己的数据，可以随时删除或导出</li>
+                    <li><strong>权限透明：</strong>应用仅在需要时请求通讯录访问权限，用途清晰明确</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>常见问题</h2>
+
+                <div class="faq-item">
+                    <h4>Q: 应用会收集我的联系人信息吗？</h4>
+                    <p>A: 不会。应用仅在您的设备本地处理通讯录数据，不会上传到任何服务器。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 合并联系人会丢失数据吗？</h4>
+                    <p>A: 不会。我们的智能合并算法会自动保留最完整的信息，包括所有电话号码、邮箱、地址等。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 备份文件存储在哪里？</h4>
+                    <p>A: 备份文件存储在应用文档目录中，不会上传到云端（除非您通过iCloud手动同步）。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 如何导出联系人？</h4>
+                    <p>A: 在应用中选择"导出"功能，可以将联系人导出为VCF格式文件，通过AirDrop、邮件等方式分享。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 同步到系统通讯录安全吗？</h4>
+                    <p>A: 安全。同步使用iOS系统框架，受系统安全机制保护，仅通过iCloud服务进行网络传输。</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>联系我们</h2>
+                <p>如果您遇到任何问题或有任何建议，欢迎联系我们：</p>
+
+                <div class="contact-box">
+                    <h3>技术支持</h3>
+                    <p>点击下方按钮发送邮件给我们：</p>
+                    <a href="mailto:shidongwa@gmail.com?subject=ContactManager%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%9C%89%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%9A">发送邮件</a>
+
+                    <p style="margin-top: 20px;"><strong>在邮件中请包含以下信息：</strong></p>
+                    <ul>
+                        <li>您使用的iOS版本</li>
+                        <li>ContactManager应用版本号</li>
+                        <li>问题的详细描述</li>
+                        <li>复现问题的步骤（如果可能）</li>
+                        <li>屏幕截图（如果适用）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="privacy-link">
+                <a href="privacy_policy_zh.html">查看隐私政策</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 ContactManager. 保留所有权利。</p>
+            <p>最后更新：2026年1月27日</p>
+        </div>
+    </div>
+</body>
+</html>

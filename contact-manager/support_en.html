@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactManager - Technical Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #007AFF;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007AFF;
+            padding-bottom: 10px;
+        }
+        .section h3 {
+            color: #5856D6;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        .section p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .section ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        .section li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .feature-card {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #007AFF;
+        }
+        .feature-card strong {
+            color: #007AFF;
+        }
+        .contact-box {
+            background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .contact-box h3 {
+            color: #007AFF;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        .contact-box a {
+            display: inline-block;
+            background: #007AFF;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        .contact-box a:hover {
+            background: #5856D6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,122,255,0.3);
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+        .faq-item h4 {
+            color: #007AFF;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        .privacy-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .privacy-link a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ContactManager</h1>
+            <p>Technical Support Center</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>App Features</h2>
+                <p>ContactManager is a professional contact management tool providing the following core features:</p>
+
+                <div class="feature-card">
+                    <strong>Contact Deduplication</strong>
+                    <p>Intelligently detect and merge duplicate contacts, supporting detection by phone number and name.</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>Contact Management</strong>
+                    <p>Easily modify, delete, and edit contact information with batch operations support.</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>Contact Merging</strong>
+                    <p>Smart merging of duplicate contacts automatically preserves the most complete information to avoid data loss.</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>Import & Export</strong>
+                    <p>Import contacts from system address book, export contacts in VCF format for backup or sharing.</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>Sync to System Address Book</strong>
+                    <p>Sync app contacts back to system address book, enabling cross-device synchronization via iCloud.</p>
+                </div>
+
+                <div class="feature-card">
+                    <strong>Backup & Restore</strong>
+                    <p>Create local backup files, restore address book data anytime, with backup history management.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Privacy & Security</h2>
+                <p><strong>Data security is our most important commitment:</strong></p>
+                <ul>
+                    <li><strong>Completely Local Operations:</strong> All contact processing, modification, merging, and deletion happen locally on your device</li>
+                    <li><strong>No Cloud Upload:</strong> The app does not upload your contact data to any third-party servers</li>
+                    <li><strong>System Sync:</strong> Cross-network transmission only supports iCloud service through iOS system framework for system address book synchronization</li>
+                    <li><strong>Data Control:</strong> You have complete control over your data and can delete or export it anytime</li>
+                    <li><strong>Transparent Permissions:</strong> The app only requests contact access permission when needed, with clear and defined purposes</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h4>Q: Will the app collect my contact information?</h4>
+                    <p>A: No. The app processes contact data only locally on your device and does not upload to any servers.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: Will merging contacts cause data loss?</h4>
+                    <p>A: No. Our smart merge algorithm automatically preserves the most complete information, including all phone numbers, emails, addresses, etc.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: Where are backup files stored?</h4>
+                    <p>A: Backup files are stored in the app's documents directory and are not uploaded to the cloud (unless you manually sync via iCloud).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: How do I export contacts?</h4>
+                    <p>A: Select the "Export" feature in the app to export contacts in VCF format and share via AirDrop, email, etc.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: Is syncing to system address book secure?</h4>
+                    <p>A: Yes. Sync uses the iOS system framework and is protected by system security mechanisms, with network transmission only through iCloud services.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Contact Us</h2>
+                <p>If you encounter any issues or have any suggestions, please feel free to contact us:</p>
+
+                <div class="contact-box">
+                    <h3>Technical Support</h3>
+                    <p>Click the button below to send us an email:</p>
+                    <a href="mailto:shidongwa@gmail.com?subject=ContactManager%20Technical%20Support&body=Hello%2C%20I%20have%20a%20question%3A">Send Email</a>
+
+                    <p style="margin-top: 20px;"><strong>Please include the following information in your email:</strong></p>
+                    <ul>
+                        <li>Your iOS version</li>
+                        <li>ContactManager app version</li>
+                        <li>Detailed description of the issue</li>
+                        <li>Steps to reproduce the issue (if possible)</li>
+                        <li>Screenshot (if applicable)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="privacy-link">
+                <a href="privacy_policy_en.html">View Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 ContactManager. All rights reserved.</p>
+            <p>Last Updated: January 27, 2026</p>
+        </div>
+    </div>
+</body>
+</html>
