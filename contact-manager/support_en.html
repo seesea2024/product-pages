@@ -136,42 +136,42 @@
     <div class="container">
         <div class="header">
             <h1>ContactManager</h1>
-            <p>Technical Support Center</p>
+            <p>Support Center</p>
         </div>
 
         <div class="content">
             <div class="section">
                 <h2>App Features</h2>
-                <p>ContactManager is a professional contact management tool providing the following core features:</p>
+                <p>ContactManager is a professional address book management tool offering the following core features:</p>
 
                 <div class="feature-card">
-                    <strong>Contact Deduplication</strong>
-                    <p>Intelligently detect and merge duplicate contacts, supporting detection by phone number and name.</p>
+                    <strong>Duplicate Contact Removal</strong>
+                    <p>Intelligently detect and merge duplicate contacts, supporting detection by phone number or name.</p>
                 </div>
 
                 <div class="feature-card">
                     <strong>Contact Management</strong>
-                    <p>Easily modify, delete, and edit contact information with batch operations support.</p>
+                    <p>Easily modify, delete, and edit contact information with support for batch operations.</p>
                 </div>
 
                 <div class="feature-card">
                     <strong>Contact Merging</strong>
-                    <p>Smart merging of duplicate contacts automatically preserves the most complete information to avoid data loss.</p>
+                    <p>Smart merging of duplicate contacts, automatically retaining the most complete information to prevent data loss.</p>
                 </div>
 
                 <div class="feature-card">
                     <strong>Import & Export</strong>
-                    <p>Import contacts from system address book, export contacts in VCF format for backup or sharing.</p>
+                    <p>Import contacts from the system address book and export them in VCF format for backup or sharing.</p>
                 </div>
 
                 <div class="feature-card">
-                    <strong>Sync to System Address Book</strong>
-                    <p>Sync app contacts back to system address book, enabling cross-device synchronization via iCloud.</p>
+                    <strong>System Sync</strong>
+                    <p>Sync contacts within the app back to the system address book, utilizing iCloud for cross-device synchronization.</p>
                 </div>
 
                 <div class="feature-card">
                     <strong>Backup & Restore</strong>
-                    <p>Create local backup files, restore address book data anytime, with backup history management.</p>
+                    <p>Create local backup files to restore address book data at any time, with support for backup history management.</p>
                 </div>
             </div>
 
@@ -179,65 +179,70 @@
                 <h2>Privacy & Security</h2>
                 <p><strong>Data security is our most important commitment:</strong></p>
                 <ul>
-                    <li><strong>Completely Local Operations:</strong> All contact processing, modification, merging, and deletion happen locally on your device</li>
-                    <li><strong>No Cloud Upload:</strong> The app does not upload your contact data to any third-party servers</li>
-                    <li><strong>System Sync:</strong> Cross-network transmission only supports iCloud service through iOS system framework for system address book synchronization</li>
-                    <li><strong>Data Control:</strong> You have complete control over your data and can delete or export it anytime</li>
-                    <li><strong>Transparent Permissions:</strong> The app only requests contact access permission when needed, with clear and defined purposes</li>
+                    <li><strong>Purely Local Operation:</strong> All contact data processing, modification, merging, and deletion are completed locally on your device.</li>
+                    <li><strong>No Cloud Uploads:</strong> The app does not upload your address book data to any third-party servers.</li>
+                    <li><strong>System Synchronization:</strong> Cross-network transmission is only supported via the iOS system framework calling iCloud services for system address book synchronization.</li>
+                    <li><strong>Data Control:</strong> You have complete control over your data and can delete or export it at any time.</li>
+                    <li><strong>Transparent Permissions:</strong> The app only requests access to your contacts when necessary, with clear and explicit purposes.</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2>Frequently Asked Questions</h2>
+                <h2>FAQ</h2>
 
                 <div class="faq-item">
-                    <h4>Q: Will the app collect my contact information?</h4>
-                    <p>A: No. The app processes contact data only locally on your device and does not upload to any servers.</p>
+                    <h4>Q: Does the app collect my contact information?</h4>
+                    <p>A: No. The app only processes address book data locally on your device and never uploads it to any server.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: What fields are included when importing contacts from the system address book to ContactManager?</h4>
+                    <p>A: The fields managed in ContactManager include basic information such as phone numbers, names, emails, company, and job titles. ContactManager is a simplified version of the system address book, not a replacement. Due to Apple's limitations, ContactManager does not import notes or file-related fields like images or videos.</p>
                 </div>
 
                 <div class="faq-item">
                     <h4>Q: Will merging contacts cause data loss?</h4>
-                    <p>A: No. Our smart merge algorithm automatically preserves the most complete information, including all phone numbers, emails, addresses, etc.</p>
+                    <p>A: Merging is performed within ContactManager and will not result in data loss. The merging rules are based on phone numbers and names.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h4>Q: Where are backup files stored?</h4>
-                    <p>A: Backup files are stored in the app's documents directory and are not uploaded to the cloud (unless you manually sync via iCloud).</p>
+                    <h4>Q: Where are the backup files stored?</h4>
+                    <p>A: Backup files are stored in the app's local document directory and are not uploaded to the cloud (unless you sync them manually via iCloud).</p>
                 </div>
 
                 <div class="faq-item">
                     <h4>Q: How do I export contacts?</h4>
-                    <p>A: Select the "Export" feature in the app to export contacts in VCF format and share via AirDrop, email, etc.</p>
+                    <p>A: Select the "Export" feature in the app to export contacts as VCF files, which can then be shared via AirDrop, email, etc.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h4>Q: Is syncing to system address book secure?</h4>
-                    <p>A: Yes. Sync uses the iOS system framework and is protected by system security mechanisms, with network transmission only through iCloud services.</p>
+                    <h4>Q: Is it safe to sync to the system address book?</h4>
+                    <p>A: Yes. During synchronization, existing contacts are not deleted; only basic info like name, email, company, and title are updated. Duplicate contacts will be merged/removed, and fields not in the sync list (like notes or images) will be discarded. If you have concerns, please use the system's "Export vCard" feature to create a backup in advance. Synchronization uses the iOS system framework and is protected by system security mechanisms, with network transmission occurring only via iCloud.</p>
                 </div>
             </div>
 
             <div class="section">
                 <h2>Contact Us</h2>
-                <p>If you encounter any issues or have any suggestions, please feel free to contact us:</p>
+                <p>If you encounter any issues or have any suggestions, please feel free to reach out to us:</p>
 
                 <div class="contact-box">
                     <h3>Technical Support</h3>
                     <p>Click the button below to send us an email:</p>
-                    <a href="mailto:shidongwa@gmail.com?subject=ContactManager%20Technical%20Support&body=Hello%2C%20I%20have%20a%20question%3A">Send Email</a>
+                    <a href="mailto:shidongwa@gmail.com?subject=ContactManager%20Technical%20Support&body=Hello,%20I%20have%20a%20question:">Send Email</a>
 
                     <p style="margin-top: 20px;"><strong>Please include the following information in your email:</strong></p>
                     <ul>
                         <li>Your iOS version</li>
-                        <li>ContactManager app version</li>
+                        <li>ContactManager app version number</li>
                         <li>Detailed description of the issue</li>
                         <li>Steps to reproduce the issue (if possible)</li>
-                        <li>Screenshot (if applicable)</li>
+                        <li>Screenshots (if applicable)</li>
                     </ul>
                 </div>
             </div>
 
             <div class="privacy-link">
-                <a href="privacy_policy_en.html">View Privacy Policy</a>
+                <a href="privacy_en.html">View Privacy Policy</a>
             </div>
         </div>
 

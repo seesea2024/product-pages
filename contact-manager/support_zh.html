@@ -196,8 +196,13 @@
                 </div>
 
                 <div class="faq-item">
+                    <h4>Q: 从系统通讯录导入联系人到ContactManager包括哪些字段？</h4>
+                    <p>A: ContactManager中管理的字段包括电话号码、姓名、邮箱、工作单位和职位等基本信息。ContactManager是系统通讯录的简化版本而不是代替。由于苹果通讯录限制ContactManager不会导入备注信息，文件相关的字段比如图片、视频等。</p>
+                </div>
+
+                <div class="faq-item">
                     <h4>Q: 合并联系人会丢失数据吗？</h4>
-                    <p>A: 不会。我们的智能合并算法会自动保留最完整的信息，包括所有电话号码、邮箱、地址等。</p>
+                    <p>A: 合并联系人在ContactManager中进行，不会丢失数据。合并规则基于手机号码和姓名进行合并。</p>
                 </div>
 
                 <div class="faq-item">
@@ -212,7 +217,7 @@
 
                 <div class="faq-item">
                     <h4>Q: 同步到系统通讯录安全吗？</h4>
-                    <p>A: 安全。同步使用iOS系统框架，受系统安全机制保护，仅通过iCloud服务进行网络传输。</p>
+                    <p>A: 安全。对应已存在的联系人同步时不会删除，只更新姓名、邮箱、工作单位和职位等基本信息。对于重复的联系人会删除，不在同步列表中的字段比如备注、图片会丢弃。介意的话请使用系统通讯录的导出vCard功能提前做好备份。同步使用iOS系统框架，受系统安全机制保护，仅通过iCloud服务进行网络传输。</p>
                 </div>
             </div>
 
@@ -237,7 +242,7 @@
             </div>
 
             <div class="privacy-link">
-                <a href="privacy_policy_zh.html">查看隐私政策</a>
+                <a href="privacy_zh.html">查看隐私政策</a>
             </div>
         </div>
 
