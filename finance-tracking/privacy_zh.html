@@ -3,64 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - 财务追踪</title>
+    <title>隐私政策 - 个人财务小助手</title>
     <style>
+        :root {
+            --primary: #007AFF; --primary-light: #E8F2FF;
+            --text: #1D1D1F; --text-secondary: #6E6E73; --text-tertiary: #AEAEB2;
+            --bg: #F5F5F7; --card: #FFFFFF; --card-border: #E5E5EA;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6; color: var(--text); background-color: var(--bg); -webkit-font-smoothing: antialiased;
         }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .header {
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            color: white; padding: 48px 20px 40px; text-align: center;
         }
-        h1 {
-            color: #007AFF;
-            font-size: 28px;
-            margin-bottom: 20px;
+        .header-icon {
+            width: 64px; height: 64px; background: rgba(255,255,255,0.2);
+            border-radius: 16px; display: inline-flex; align-items: center;
+            justify-content: center; font-size: 32px; margin-bottom: 16px;
         }
-        h2 {
-            color: #333;
-            font-size: 18px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+        .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .header p { font-size: 16px; opacity: 0.85; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 16px 60px; }
+        .section { margin-top: 32px; }
+        .section-title { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+        .card {
+            background: var(--card); border-radius: 12px; overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid var(--card-border);
         }
-        p {
-            margin-bottom: 15px;
-            font-size: 16px;
+        .policy-item { border-bottom: 1px solid var(--card-border); padding: 20px; }
+        .policy-item:last-child { border-bottom: none; }
+        .policy-number {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; border-radius: 8px;
+            background: var(--primary-light); color: var(--primary);
+            font-size: 14px; font-weight: 700; margin-right: 10px; flex-shrink: 0;
         }
-        .last-updated {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 30px;
+        .policy-title {
+            font-size: 17px; font-weight: 600; color: var(--text);
+            margin-bottom: 8px; display: flex; align-items: center;
+        }
+        .policy-body { font-size: 15px; color: var(--text-secondary); line-height: 1.7; padding-left: 38px; }
+        .policy-body ul { padding-left: 18px; margin: 8px 0; }
+        .policy-body li { margin-bottom: 4px; }
+        .highlight-box {
+            background: var(--primary-light); border-radius: 10px; padding: 16px 20px;
+            margin-top: 16px; border-left: 4px solid var(--primary);
+        }
+        .highlight-box p { font-size: 14px; color: var(--text-secondary); margin: 0; }
+        .highlight-box strong { color: var(--primary); }
+        .updated-date { font-size: 13px; color: var(--text-tertiary); margin-top: 24px; text-align: center; }
+        @media (max-width: 600px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 24px; }
+            .policy-body { padding-left: 0; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>隐私政策</h1>
-        <p class="last-updated">最后更新日期：2025年2月20日</p>
-        
-        <h2>1. 信息收集</h2>
-        <p>财务追踪应用仅在本机存储您的财务数据。我们不会收集、上传或分享您的任何个人财务信息。所有数据都保存在您的设备本地或您选择的iCloud账户中。</p>
-        
-        <h2>2. 数据安全</h2>
-        <p>我们使用iOS提供的标准安全措施来保护您的数据。您的财务数据不会在未经您授权的情况下传输到任何第三方服务器。</p>
-        
-        <h2>3. 应用权限</h2>
-        <p>应用可能需要访问您的照片库来导入银行账单截图。这些权限仅在您主动选择导入功能时才会被请求。</p>
-        
-        <h2>4. 第三方服务</h2>
-        <p>专业版用户可选择使用iCloud同步功能，数据将通过Apple的iCloud服务进行同步，遵循Apple的隐私政策。</p>
-        
-        <h2>5. 联系我们</h2>
-        <p>如果您对隐私政策有任何疑问，请通过 10189795@qq.com 联系我们。</p>
+<div class="header">
+    <div class="header-icon">🔒</div>
+    <h1>隐私政策</h1>
+    <p>个人财务小助手 — 您的数据安全是我们的首要原则</p>
+</div>
+<div class="content">
+    <div class="highlight-box">
+        <p><strong>核心承诺</strong>：个人财务小助手不会收集、上传或分享您的任何个人财务信息。所有数据保存在您的设备本地，iCloud 同步仅在你主动开启后通过 Apple 安全通道传输。</p>
     </div>
+    <div class="section">
+        <div class="card">
+            <div class="policy-item">
+                <div class="policy-title"><span class="policy-number">1</span>信息收集</div>
+                <div class="policy-body">
+                    <p>个人财务小助手仅在本机存储您的财务数据。我们不会收集、上传或分享您的任何个人财务信息。</p>
+                    <ul>
+                        <li>资产快照数据：仅保存在设备本地</li>
+                        <li>交易流水数据：仅保存在设备本地</li>
+                        <li>截屏识别：在设备端完成，图片不会被上传</li>
+                        <li>iCloud 同步：仅在您主动开启 Pro 版本后，通过 Apple iCloud 服务同步</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="policy-item">
+                <div class="policy-title"><span class="policy-number">2</span>数据安全</div>
+                <div class="policy-body">
+                    <p>我们使用 iOS 提供的标准安全措施来保护您的数据。您的财务数据不会在未经您授权的情况下传输到任何第三方服务器。</p>
+                    <ul>
+                        <li>本地数据使用 iOS 沙盒机制保护</li>
+                        <li>iCloud 同步使用 Apple 端到端加密</li>
+                        <li>不使用任何第三方分析或广告 SDK</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="policy-item">
+                <div class="policy-title"><span class="policy-number">3</span>应用权限</div>
+                <div class="policy-body">
+                    <p>应用可能需要以下权限：</p>
+                    <ul>
+                        <li><strong>相册访问</strong>：用于导入银行账单截图和资产截屏，仅在您主动选择导入功能时请求</li>
+                        <li><strong>相机访问</strong>：用于扫描银行账单，仅在您主动使用扫描功能时请求</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="policy-item">
+                <div class="policy-title"><span class="policy-number">4</span>第三方服务</div>
+                <div class="policy-body">
+                    <p>Pro 版用户可选择使用 iCloud 同步功能，数据将通过 Apple 的 iCloud 服务进行同步，遵循 Apple 的隐私政策。我们不使用任何其他第三方数据服务。</p>
+                </div>
+            </div>
+            <div class="policy-item">
+                <div class="policy-title"><span class="policy-number">5</span>内购支付</div>
+                <div class="policy-body">
+                    <p>Pro 版内购通过 Apple App Store 完成，支付信息由 Apple 处理，我们不接触您的支付信息。</p>
+                </div>
+            </div>
+            <div class="policy-item">
+                <div class="policy-title"><span class="policy-number">6</span>儿童隐私</div>
+                <div class="policy-body">
+                    <p>本应用不面向 13 岁以下儿童，我们不会故意收集儿童的个人信息。</p>
+                </div>
+            </div>
+            <div class="policy-item">
+                <div class="policy-title"><span class="policy-number">7</span>政策更新</div>
+                <div class="policy-body">
+                    <p>我们可能会不时更新本隐私政策。重大变更将在应用内通知您。继续使用应用即表示您同意更新后的政策。</p>
+                </div>
+            </div>
+            <div class="policy-item">
+                <div class="policy-title"><span class="policy-number">8</span>联系我们</div>
+                <div class="policy-body">
+                    <p>如果您对隐私政策有任何疑问，请通过 <a href="mailto:10189795@qq.com" style="color: var(--primary); text-decoration: none;">10189795@qq.com</a> 联系我们。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="updated-date">最后更新日期：2026年5月24日</p>
+</div>
 </body>
 </html>
