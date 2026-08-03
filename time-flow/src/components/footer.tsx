@@ -4,7 +4,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-white/60 text-sm">
-            © 2024 TimeFlow. All rights reserved.
+            © 2026 TimeFlow. All rights reserved.
           </div>
           <div className="flex gap-8">
             <a href="/privacy-zh.html" className="text-white/60 hover:text-white text-sm transition-colors">
