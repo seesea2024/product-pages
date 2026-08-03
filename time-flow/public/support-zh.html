@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间助手 - 技术支持</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 24px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content {
+            background: white;
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .faq-section {
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #4a4a4a;
+        }
+
+        .contact-section {
+            background: #f8f9ff;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .contact-email {
+            font-size: 20px;
+            color: #667eea;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .screenshot {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .screenshots {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">⏱️</div>
+            <h1>时间助手</h1>
+            <p class="subtitle">技术支持</p>
+        </header>
+
+        <div class="content">
+            <h2>常见问题</h2>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="question">Q: 如何开始使用时间助手？</div>
+                    <div class="answer">A: 下载并打开应用后，您可以通过点击 "+" 按钮来创建您的第一个时间记录。您可以选择时间段记录或时间点记录。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">Q: 如何使用计时器功能？</div>
+                    <div class="answer">A: 切换到计时器标签页，设置活动名称，点击"开始"即可开始计时。计时过程中可以暂停或停止，停止后会自动保存记录。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">Q: 如何创建和管理标签？</div>
+                    <div class="answer">A: 在标签页面，点击 "+" 按钮创建新标签，可以设置标签名称和颜色。标签可以帮助您分类和统计不同类型的活动。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">Q: iCloud 同步是如何工作的？</div>
+                    <div class="answer">A: 确保您的设备已登录 Apple ID 并开启 iCloud，时间助手会自动在您的所有设备之间同步数据。您可以在设置中查看同步状态。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">Q: 如何导出我的数据？</div>
+                    <div class="answer">A: 在标签详情页面，您可以选择导出为 PDF 或 CSV 格式，方便您备份或在其他应用中查看数据。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">Q: 如何记录血压数据？</div>
+                    <div class="answer">A: 在添加记录时选择血压模板，输入收缩压、舒张压和脉搏数据。您还可以使用相机功能直接拍摄血压计读数进行识别。</div>
+                </div>
+            </div>
+
+            <div class="screenshots">
+                <div class="screenshot">
+                    <img src="iphone/1320x2868/zh-Hans/01-device-bottom.png" alt="时间轴">
+                </div>
+                <div class="screenshot">
+                    <img src="iphone/1320x2868/zh-Hans/02-hero.png" alt="计时器">
+                </div>
+                <div class="screenshot">
+                    <img src="iphone/1320x2868/zh-Hans/03-device-top.png" alt="记录">
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <div class="contact-title">还需要帮助？</div>
+                <p style="margin-bottom: 20px; color: #666; line-height: 1.7;">
+                    如果您有任何问题、建议或反馈，请随时通过邮件联系我们。
+                </p>
+                <a href="mailto:contact@9631369.xyz" class="contact-email">contact@9631369.xyz</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 时间助手. 保留所有权利.</p>
+        </footer>
+    </div>
+</body>
+</html>
