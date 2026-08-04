@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+src
+*.mjs
+*.ts
+*.json
+!package.json
+package-lock.json
+.gitignore
+README.md
+tsconfig.json
+tailwind.config.ts
+postcss.config.mjs
+next.config.mjs
+next-env.d.ts
