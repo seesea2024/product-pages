@@ -1,246 +1,115 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>时间助手 - 隐私政策</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-            min-height: 100vh;
-            color: #1a1a1a;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            color: white;
-        }
-
-        .logo {
-            width: 100px;
-            height: 100px;
-            background: white;
-            border-radius: 24px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-
-        .content {
-            background: white;
-            border-radius: 24px;
-            padding: 50px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-
-        h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-            margin-top: 30px;
-        }
-
-        h2:first-child {
-            margin-top: 0;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #4a4a4a;
-            margin-bottom: 15px;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        ul {
-            margin: 15px 0;
-            padding-left: 25px;
-        }
-
-        li {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #4a4a4a;
-            margin-bottom: 10px;
-        }
-
-        .contact-section {
-            background: #f0fdf4;
-            border-radius: 16px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .contact-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-
-        .contact-email {
-            font-size: 20px;
-            color: #11998e;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .contact-email:hover {
-            text-decoration: underline;
-        }
-
-        .last-updated {
-            text-align: center;
-            color: #888;
-            font-size: 14px;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e5e5e5;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: white;
-            opacity: 0.8;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时间助手 — 隐私政策</title>
+  <meta name="description" content="时间助手 (TimeFlow) 的隐私政策。我们采取本地优先、端到端 iCloud 同步的方式保护你的时间数据。">
+  <link rel="icon" href="images/appicon.png">
+  <link rel="apple-touch-icon" href="images/appicon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">⏱️</div>
-            <h1>时间助手</h1>
-            <p class="subtitle">隐私政策</p>
-        </header>
-
-        <div class="content">
-            <div class="section">
-                <h2>概述</h2>
-                <p>欢迎使用时间助手！我们非常重视您的隐私，并致力于保护您的个人信息。本隐私政策说明了我们如何收集、使用、存储和保护您的信息。</p>
-            </div>
-
-            <div class="section">
-                <h2>我们收集的信息</h2>
-                <p>时间助手设计为在本地设备上存储您的大部分数据。我们收集的信息包括：</p>
-                <ul>
-                    <li><strong>时间记录数据：</strong>您创建的时间记录、活动描述、标签等信息</li>
-                    <li><strong>健康数据：</strong>您选择记录的血压、脉搏等健康信息</li>
-                    <li><strong>设备信息：</strong>用于改进应用性能的基本设备信息</li>
-                    <li><strong>iCloud 数据：</strong>如果您启用 iCloud 同步，数据会存储在您的 iCloud 账户中</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>我们如何使用信息</h2>
-                <p>我们使用收集的信息来：</p>
-                <ul>
-                    <li>提供和维护应用的核心功能</li>
-                    <li>改进用户体验和应用性能</li>
-                    <li>通过 iCloud 在您的设备间同步数据</li>
-                    <li>响应用户支持请求</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>数据存储和安全</h2>
-                <p><strong>本地存储：</strong>您的所有数据默认存储在您的设备本地，使用 Apple 的安全加密机制。</p>
-                <p><strong>iCloud 同步：</strong>如果您启用 iCloud 同步，数据会通过 Apple 的 iCloud 服务传输和存储，受 Apple 的安全机制保护。</p>
-                <p><strong>我们不收集：</strong>我们不会将您的数据发送到我们自己的服务器，也不会出售或出租您的个人信息给第三方。</p>
-            </div>
-
-            <div class="section">
-                <h2>权限说明</h2>
-                <ul>
-                    <li><strong>相机权限：</strong>用于拍摄血压计等设备照片进行 OCR 识别（仅在您使用时才会请求）</li>
-                    <li><strong>麦克风权限：</strong>用于语音输入功能（仅在您使用时才会请求）</li>
-                    <li><strong>语音识别权限：</strong>用于解析您的语音输入（仅在您使用时才会请求）</li>
-                    <li><strong>照片权限：</strong>用于选择设备照片进行 OCR 识别（仅在您使用时才会请求）</li>
-                    <li><strong>Siri 权限：</strong>用于通过 Siri 控制计时器和时间追踪（仅在您使用时才会请求）</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>您的权利</h2>
-                <p>您拥有以下权利：</p>
-                <ul>
-                    <li>访问您的所有数据</li>
-                    <li>导出您的数据（PDF 和 CSV 格式）</li>
-                    <li>删除您的全部或部分数据</li>
-                    <li>随时禁用 iCloud 同步</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>儿童隐私</h2>
-                <p>我们的应用不专门面向 13 岁以下的儿童。我们不会故意收集 13 岁以下儿童的个人信息。</p>
-            </div>
-
-            <div class="section">
-                <h2>隐私政策的变更</h2>
-                <p>我们可能会不时更新本隐私政策。当我们更新时，我们会在应用中通知您，并更新页面顶部的"最后更新"日期。</p>
-            </div>
-
-            <div class="contact-section">
-                <div class="contact-title">联系我们</div>
-                <p style="margin-bottom: 20px; color: #666; line-height: 1.7;">
-                    如果您对本隐私政策有任何问题，请通过以下方式联系我们：
-                </p>
-                <a href="mailto:contact@9631369.xyz" class="contact-email">contact@9631369.xyz</a>
-            </div>
-
-            <div class="last-updated">
-                最后更新：2026年8月
-            </div>
-        </div>
-
-        <footer>
-            <p>&copy; 2026 时间助手. 保留所有权利.</p>
-        </footer>
+  <div class="page">
+    <div class="page-header">
+      <div class="eyebrow">隐私政策</div>
+      <h1>时间助手 · Privacy</h1>
+      <p>我们如何收集、使用、存储与保护你的数据。</p>
     </div>
+
+    <div class="page-card">
+      <h2>1. 应用简介</h2>
+      <p>时间助手（TimeFlow）是一款简洁高效的时间记录与健康数据追踪应用，覆盖 iOS 与 macOS。所有数据默认保存在你的设备本地，跨设备同步通过你自己的 iCloud 账户完成。</p>
+      <h3>核心功能</h3>
+      <ul>
+        <li><strong>时间记录：</strong>时间轴视图、时间段 / 时间点记录、标签管理与筛选。</li>
+        <li><strong>计时器：</strong>内置计时器与预设活动模板，一键开始 / 停止追踪。</li>
+        <li><strong>数据分析：</strong>按日、周、月、年维度展示时间分配与趋势。</li>
+        <li><strong>健康数据：</strong>通过相机 OCR 识别血压值；可手动记录体重等指标。</li>
+        <li><strong>数据导出：</strong>支持 PDF 格式导出，方便分享与归档。</li>
+        <li><strong>iCloud 同步：</strong>基于 CloudKit 跨设备同步，可随时关闭。</li>
+        <li><strong>语音与 Siri：</strong>支持系统听写输入与 Siri 快捷指令。</li>
+      </ul>
+
+      <h2>2. 数据收集</h2>
+      <p>我们遵循最小化原则：</p>
+      <ul>
+        <li>我们不会收集你的个人信息，也不会将你的时间记录或健康数据上传到任何第三方服务器。</li>
+        <li>应用不要求注册账号，不内置广告与第三方分析 SDK。</li>
+        <li>在开启 iCloud 同步时，记录会进入你 Apple ID 名下的私有 CloudKit 数据库，开发者无法访问。</li>
+      </ul>
+      <div class="callout">
+        <p><strong>关键承诺：</strong>你的时间记录、标签、血压等健康数据，永远只属于你。</p>
+      </div>
+
+      <h2>3. 数据存储</h2>
+      <h3>3.1 本地存储</h3>
+      <p>所有记录默认存储在 iOS / macOS 应用沙盒内（通过 SwiftData / Core Data 持久化），不依赖任何外部数据库或第三方云服务。</p>
+      <h3>3.2 iCloud 同步（可选）</h3>
+      <p>当你在「设置 → iCloud 同步」中开启同步时，时间记录与标签会通过 CloudKit 同步到你的 Apple ID 私有数据库：</p>
+      <ul>
+        <li>容器标识符：<code>iCloud.com.stone.TimeFlow</code></li>
+        <li>开发者只能写入数据，无法读取用户私有数据。</li>
+        <li>关闭同步后，本地数据保留；已同步数据由你通过 iCloud 设置自行管理。</li>
+      </ul>
+
+      <h2>4. 设备权限</h2>
+      <p>应用仅在对应功能被使用时申请权限：</p>
+      <ul>
+        <li><strong>相机（NSCameraUsageDescription）：</strong>用于拍摄血压计照片进行 OCR 识别。照片仅在设备端处理，不上传。</li>
+        <li><strong>相册（NSPhotoLibraryUsageDescription）：</strong>用于从相册选择已有照片进行 OCR 识别。读取的图片仅在本次识别中使用，不会上传。</li>
+        <li><strong>麦克风（NSMicrophoneUsageDescription）：</strong>用于系统听写输入。音频流由系统听写框架处理，应用不直接存储。</li>
+        <li><strong>语音识别（NSSpeechRecognitionUsageDescription）：</strong>用于解析听写内容。仅返回文本结果，不存储音频。</li>
+        <li><strong>Siri（NSSiriUsageDescription）：</strong>用于响应 Siri 快捷指令控制计时器。</li>
+        <li><strong>远程通知（aps-environment）：</strong>用于 CloudKit 静默推送同步事件，不发送营销通知。</li>
+      </ul>
+      <p>你可以随时在 iOS「设置 → 隐私」中关闭任意权限。</p>
+
+      <h2>5. OCR 与图像处理</h2>
+      <ul>
+        <li>血压 OCR 识别完全在设备本地完成，不向任何服务器发送图像。</li>
+        <li>识别结果（结构化数据 + 原始文本）会随记录保存在本地 / 你的 iCloud 中。</li>
+        <li>你可以在任意时刻删除单条记录或清空全部数据。</li>
+      </ul>
+
+      <h2>6. 内购</h2>
+      <ul>
+        <li>应用提供高级会员内购（<code>com.stone.TimeFlow.premium</code>），由 Apple StoreKit 2 处理。</li>
+        <li>支付与发票由 Apple 托管，应用不接触你的信用卡或支付信息。</li>
+        <li>免费用户拥有 30 次高级功能使用额度，开发者仅在本地记录使用次数。</li>
+      </ul>
+
+      <h2>7. 第三方服务</h2>
+      <p>除 Apple 系统服务（StoreKit、CloudKit、Siri、Speech）外，应用不集成任何第三方 SDK、统计、广告或社交组件。</p>
+
+      <h2>8. 儿童隐私</h2>
+      <p>本应用面向一般用户，不面向 13 岁以下儿童设计，也不会有意识地收集儿童的个人信息。</p>
+
+      <h2>9. 数据导出与删除</h2>
+      <ul>
+        <li><strong>导出：</strong>支持将记录导出为 PDF 格式。</li>
+        <li><strong>删除单条：</strong>在记录详情页可删除任意一条记录。</li>
+        <li><strong>清空数据：</strong>卸载应用即可清除本地全部数据；如开启 iCloud 同步，请同时在 iCloud 设置中删除应用数据。</li>
+      </ul>
+
+      <h2>10. 政策更新</h2>
+      <p>我们可能不定期更新本政策，更新后的版本会发布在本页面并标注「最后更新日期」。如发生重大变更，会通过应用内提示或更新说明告知。</p>
+
+      <h2>11. 联系我们</h2>
+      <p>如果你对隐私有任何疑问、意见或请求，可通过以下方式联系我们：</p>
+      <p>📧 <a class="contact-cta" href="mailto:shidongwa@gmail.com?subject=%E6%97%B6%E9%97%B4%E5%8A%A9%E6%89%8B%20%E9%9A%90%E7%A7%81%E5%8F%8D%E9%A6%88">shidongwa@gmail.com</a></p>
+      <p>邮件主题建议写明「隐私反馈」或「数据请求」，我们会在 7 个工作日内回复。</p>
+    </div>
+
+    <div class="page-footer">
+      <p>© 2026 时间助手 / TimeFlow. 保留所有权利。</p>
+      <p>最后更新日期：2026 年 8 月 4 日</p>
+      <p style="margin-top:12px;">
+        <a href="index.html">← 返回首页</a> ·
+        <a href="support_zh.html">帮助与支持</a> ·
+        <a href="privacy_en.html">English version</a>
+      </p>
+    </div>
+  </div>
 </body>
 </html>
